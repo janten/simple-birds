@@ -20,7 +20,7 @@ logging.basicConfig(
 # Read the AUDIO_STREAMS environment variable
 audio_streams = os.getenv(
     "AUDIO_STREAMS",
-    "rtsp://admin:vuskon-gyfjo4-Zemwaq@cam-03.home.tenber.ge/Preview_01_main",
+    "rtsp://admin:pass@cam-url.com/Preview_01_main",
 )
 
 lat = os.getenv("LATITUDE", "51.7749")

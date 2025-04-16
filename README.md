@@ -12,7 +12,6 @@ docker run \
 
 ```
 $ curl localhost:8000/metrics
-
 ```
 
 # Simple BirdNET Integration

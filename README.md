@@ -1,3 +1,20 @@
+```
+docker run \
+   --name simple-birds \
+   --detach \
+   --publish 8000:8000 \
+   --env AUDIO_STREAMS=rtsp://my-cam/stream_01 \
+   --env LATITUDE=51.2 \
+   --env LONGITUDE=7.0 \
+   --env LOCALE=de \
+   ghcr.io/janten/simple-birds 
+```
+
+```
+$ curl localhost:8000/metrics
+
+```
+
 # Simple BirdNET Integration
 
 This project provides a simple and straightforward way to use BirdNET with existing cameras or other audio sources. It is designed to record audio streams, analyze them for bird species using BirdNET, and expose the results via a Prometheus endpoint. This allows the data to be consumed, saved, and analyzed elsewhere.

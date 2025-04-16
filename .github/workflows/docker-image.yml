@@ -75,6 +75,7 @@ jobs:
     outputs:
       image-uri: ghcr.io/${{ github.repository }}@${{ steps.build.outputs.digest }}
     steps:
+      - run: echo '${{ toJSON(needs.build-and-push-image.outputs) }}'
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io

@@ -71,6 +71,11 @@ jobs:
     needs:
       - build-and-push-image
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     timeout-minutes: 10
     outputs:
       image-uri: ghcr.io/${{ github.repository }}@${{ steps.build.outputs.digest }}

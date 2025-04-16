@@ -50,6 +50,7 @@ def record_stream(stream_url):
         output_file = os.path.join(temp_dir, f"stream_{hash}_{timestamp}.mp3")
         command = [
             "ffmpeg",
+            "-rtsp_transport", "tcp",
             "-i",
             stream_url,
             "-t",

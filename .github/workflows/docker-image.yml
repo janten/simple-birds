@@ -23,7 +23,7 @@ jobs:
     runs-on: ${{ matrix.runner }}
     outputs:
       digest-arm: ${{ steps.save_digest.outputs.digest_arm64 }}
-      digest-amd: ${{ steps.save_digest.outputs.output_amd64 }}
+      digest-amd: ${{ steps.save_digest.outputs.digest_amd64 }}
     permissions:
       contents: read
       packages: write

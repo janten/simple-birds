@@ -1,5 +1,5 @@
 ```
-docker run \
+$ docker run \
    --name simple-birds \
    --detach \
    --publish 8000:8000 \
@@ -12,6 +12,20 @@ docker run \
 
 ```
 $ curl localhost:8000/metrics
+[...]
+detection_confidence_bucket{common_name="Haussperling",le="0.1",scientific_name="Passer domesticus"} 0.0
+detection_confidence_bucket{common_name="Haussperling",le="0.2",scientific_name="Passer domesticus"} 2.0
+detection_confidence_bucket{common_name="Haussperling",le="0.3",scientific_name="Passer domesticus"} 5.0
+detection_confidence_bucket{common_name="Haussperling",le="0.4",scientific_name="Passer domesticus"} 9.0
+detection_confidence_bucket{common_name="Haussperling",le="0.5",scientific_name="Passer domesticus"} 10.0
+detection_confidence_bucket{common_name="Haussperling",le="0.6",scientific_name="Passer domesticus"} 12.0
+detection_confidence_bucket{common_name="Haussperling",le="0.7",scientific_name="Passer domesticus"} 13.0
+detection_confidence_bucket{common_name="Haussperling",le="0.8",scientific_name="Passer domesticus"} 13.0
+detection_confidence_bucket{common_name="Haussperling",le="0.9",scientific_name="Passer domesticus"} 13.0
+detection_confidence_bucket{common_name="Haussperling",le="1.0",scientific_name="Passer domesticus"} 13.0
+detection_confidence_bucket{common_name="Haussperling",le="+Inf",scientific_name="Passer domesticus"} 13.0
+detection_confidence_count{common_name="Haussperling",scientific_name="Passer domesticus"} 13.0
+[...]
 ```
 
 # Simple BirdNET Integration
